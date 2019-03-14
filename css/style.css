@@ -17,7 +17,7 @@ body{
     overflow: auto;
   }
   
-  .search-dropdown-content a {
+  .search-dropdown-content option {
     color: #919191;
     padding: 12px 12px;
     padding-left: 8px;

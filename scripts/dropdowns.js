@@ -1,6 +1,15 @@
 function showSearchDropdown() {
     document.getElementById("search-dropdown").style.display="block";
+    $.getJSON( "jsons/searchList.json", function( data ) {
+      
+      $.each( data, function(key, val ) {
+        val=val.option;
+        document.getElementById("search-dropdown").innerHTML+="<option>"+val+"</option>";
+      });
   }
+  );    
+  }
+
   
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(event) {
