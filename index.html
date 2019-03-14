@@ -3,12 +3,39 @@
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link href="css/style.css" rel="stylesheet">
+  <script src = "scripts/dropdowns.js"></script>
   <title></title>
  </head>
  <body>
-  <h1>Заголовок</h1>
-  <!-- Комментарий -->
+     <header>
+     <div id = "logo-bar">
+         <div id="logo-btn">
+             
+            <a href = "index.html" id="logo">FOOSESHOES</a>
+                        
+         </div>
+         
+           <div class="search-dropdown">
+                <div id="logo-bar-search-btn">
+                     <button type="button" onclick="showSearchDropdown()" class="logo-bar-btn">
+                           SEARCH    
+                     </button>
+                </div>
+                <div id="search-dropdown" class="search-dropdown-content">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                </div>
+            </div>
+                <div id="logo-bar-login-btn">  
+                        <button type="button" class="logo-bar-btn">
+                                LOGIN or REGISTER    
+                        </button>     
+                </div>
+        </div>
+    </div>
+           
+     </header>
   <p class="c">FOOSESHOES</p>
-  <p>Второй абзац.</p>
- </body>
+  </body>
 </html>

@@ -1,4 +1,69 @@
+body{ 
+    width: 960px; 
+}
 
+.search-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-dropdown-content {
+    font-family: "Logo-btns";
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #4c4c4c;
+    min-width: 120px;
+    overflow: auto;
+  }
+  
+  .search-dropdown-content a {
+    color: #919191;
+    padding: 12px 12px;
+    padding-left: 8px;
+    text-decoration: none;
+    display: block;
+    border-style:solid;
+    border-width: 1px;
+    border-bottom: #919191
+  }
+
+.logo-bar-btn{
+    font-family: "Logo-btns";
+    font-size: 12px;
+    width: 120px;
+    color: #b1aeae;
+    border-color:  #b1aeae;
+    height: 50px;
+    background-color: black;
+    border-style:solid;
+    border-width: 1px;
+    border-top: none;
+    border-bottom:none;
+    border-left:none;
+    text-align: left;
+    padding-left: 8px;
+}
+#logo-bar{
+    padding: 0px 100px 0px 100px;
+    background-color: black;
+    display: flex;
+    flex-direction:flex-start;   
+
+}
+#logo-btn{
+    padding: 15px 0px 15px 0px;
+    width:520px;
+    border-right:1px solid #b1aeae;
+}
+
+#logo{
+    font-family: "Logo";
+    color: #57c5a0;
+    font-size: 20px;
+    text-decoration: none;
+    align-content: center;
+}
 
 @font-face {     
     font-family: "Logo"; 
@@ -41,7 +106,7 @@
 }
 
 @font-face {     
-    font-family: MyriadPro-Regular; 
+    font-family: Logo-btns; 
     src: url("../fonts/MyriadPro-Regular.otf") format("truetype"); 
 }
 
