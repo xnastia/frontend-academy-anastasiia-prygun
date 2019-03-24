@@ -1,116 +1,262 @@
-﻿body{ 
-    width: 960px; 
+﻿body {
+    width: 960px;
 }
 
-.icon-bar{
-    width:200px;
-    height:40px;
+.shoe-image-icon{
+    @extend .slider-image-icon;
+    border-style:none !important;
+    padding: 0px 15px !important;
+    height: 30px !important;   
+}
+
+.items{
+    height: 230px;
     display:flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-wrap:wrap;
 }
 
-.slider-image-icon{
-    width:35px;
-    height:35px;
-    background-color: white;
-    border-style:solid;
+.out-of-stock{
+    position:relative;
+    top: -273px;
+    margin-left: 178px;
+    background-color: #f27e4b;
+    width: 55px;
+    height: 55px;
+    font-family: Aller;
+    color: white;
+    padding-top: 15px;
+    line-height:13px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.sale{
+    @extend .out-of-stock;
+    padding-top: 20px;
+    background-color: black;
+}
+
+.shoe-price{
+    position:relative;
+    top: -55px;
+    margin-left: 10px;
+    background-color: #57c5a0;
+    width: 55px;
+    height: 55px;
+    font-family: Logo-btns;
+    color: white;
+    padding-top: 21px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.shoe-legend{
+    width: 243px;
+    height: 40px;
+    background-color:white;
+    border-top-style:solid;
+    border-color: #cccccc;
     border-width:1px;
-    border-color:#e7e7e2;
-    font-size:14px;
-    font:#cccccc;
+    font-family: Aller_Rg;
+    padding: 8px 75px;
+    font-size: 16px;
+}
+
+.shoe-with-discription{
+    width: 253px;
+    height: 218px;
+    padding: 5px;
+    margin-bottom: 10px;       
+}
+
+.shoe{
+    background-image: url("../images/shoe1.jpg");
+    width: 243px;
+    height: 178px;
+}
+
+.show-all-btn{
+    color: #bcb5a7 !important;
+    font-family: Aller;
+    border-style:solid;
+    border-color: #bcb5a7;
+    border-width: 1px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 4px 20px 4px 20px;
+    height: 24px;
+}
+
+.show-all-btn:hover{
+border-color: #716e69;
+color: #716e69 !important;
+}
+
+.home-products-legend {
+    font-family: Aller_Lt;
+    font-size: 22px;
+    line-height: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-products {
+    background-color:#ebe7df;
+    padding: 25px 100px 25px 100px;
+}
+
+.special-offers-item-badge {
+    font-family: Aller_Lt;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px 10px 20px;
+    line-height: 24px;
+    margin-top: 50px;
+    height: 45px;
+    display: inline-block;
+}
+
+.special-offers-item {
+    width: 243px;
+    height: 145px;
+    margin: 10px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#on-sale {
+    background-image: url("../images/on_sale.jpg");
+}
+
+#must-have {
+    background-image: url("../images/must_have.jpg");
+}
+
+#special-offers {
+    background-image: url("../images/special_offers.jpg");
+}
+
+.special-offers {
+    background-color: #242424;
+    width: 960px;
+    padding: 0px 100px 0px 100px;
+    height: 165px;
+    display: flex;
+}
+
+.icon-bar {
+    width: 200px;
+    height: 40px;
+    display: flex;
+}
+
+.slider-image-icon {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e7e7e2;
+    font-size: 14px;
+    font: #cccccc;
     padding: 6px 6px 6px 10px;
 }
 
-.slider-icon{
-  color:#cccccc;
+.slider-icon {
+    color: #cccccc;
 }
 
-.slider-icon:hover{
-   color: #57c5a0;
+.slider-icon:hover {
+    color: #57c5a0;
 }
 
-.price{
-    width:60px;
-    height:55px;
-    background:#57c5a0;
+.price {
+    width: 60px;
+    height: 55px;
+    background: #57c5a0;
     font-family: Logo-btns;
     color: white;
-    padding-top:21px;
+    padding-top: 21px;
     font-size: 13px;
-    text-align:center;
+    text-align: center;
     margin-bottom: 13px;
 }
 
-.slider-text-header{
+.slider-text-header {
     font-family: Logo;
     font-size: 30px;
-    line-height:30px;
+    line-height: 30px;
     width: 450px;
 }
 
-.slider-ordinar-text{
+.slider-ordinar-text {
     font-family: Logo;
     font-size: 17px;
-    line-height:20px;
-    float:left;
+    line-height: 20px;
+    float: left;
     padding-right: 82px;
 }
 
-.slider-text{
-    padding: 40px 80px 0px 515px;   
+.slider-text {
+    padding: 40px 80px 0px 515px;
 }
 
-.slider-status-legend-header{
-  font-family: Logo-btns;
-  font-size: 14px;
-  padding-top: 6px;
-  color: #979797;
+.slider-status-legend-header {
+    font-family: Logo-btns;
+    font-size: 14px;
+    padding-top: 6px;
+    color: #979797;
 }
 
-.slider-status-legend-header-active{
+.slider-status-legend-header-active {
     @extend .slider-status-legend-header;
     color: white;
 }
 
-.slider-status-legend{
-  font-family: Logo-btns;
-  font-size: 9px;
-  color: #979797;
-  font-size: 11px;
-  line-height: 0px;
+.slider-status-legend {
+    font-family: Logo-btns;
+    font-size: 9px;
+    color: #979797;
+    font-size: 11px;
+    line-height: 0px;
 }
 
 .slides {
-    display:none;
+    display: none;
 }
 
-.slides-active{
+.slides-active {
     background-image: url("../images/background.jpg");
-    width:960px;
-    height:315px;
-    display:flex;
+    width: 960px;
+    height: 315px;
+    display: flex;
 }
 
-.slider-button{
-   width: 170px;
-   height: 70px;
-   border: none;
-   background-color: #2e2e2e;
+.slider-button {
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #2e2e2e;
 }
 
-.slider-status{
-    padding: 2px 2px 2px 2px;    
+.slider-status {
+    padding: 2px 2px 2px 2px;
     width: 154px;
     height: 8px;
     position: relative;
     top: 2px;
     left: 2px;
- }
+}
 
-.slider-status-active{
+.slider-status-active {
     @extend .slider-status;
     background-color: #57c5a0;
 }
-.slider-status-margin{
+
+.slider-status-margin {
     background-color: black;
     width: 158px;
     height: 12px;
@@ -120,15 +266,16 @@
     display: flex;
     margin-top: 4px;
 }
-.slider{
-   width: 960px;
-   height: 70px;
-   background-color: #2e2e2e;
-   padding: 0px 220px 0 220px;
-   display: flex;
+
+.slider {
+    width: 960px;
+    height: 70px;
+    background-color: #2e2e2e;
+    padding: 0px 265px 0 220px;
+    display: flex;
 }
 
-#nav-bar{
+#nav-bar {
     font-family: "Aller_Rg";
     font-size: 13px;
     padding: 0px 100px 0 100px;
@@ -139,93 +286,93 @@
     justify-content: space-between;
 }
 
-.nav-bar-btns{
-    display:flex;
+.nav-bar-btns {
+    display: flex;
 }
 
-.nav-bar-btns a{
+.nav-bar-btns a {
     border-color: #eeeeee;
-    border-style:solid;
+    border-style: solid;
     border-width: 1px;
-    border-top:none;
-    border-bottom:none;
+    border-top: none;
+    border-bottom: none;
     padding: 14px 16px 14px 16px;
-    padding-left:10px;
+    padding-left: 10px;
     padding-right: 10px;
-    height:45px;
-    display:flex;
+    height: 45px;
+    display: flex;
 }
 
-#cart-icon{
+#cart-icon {
     color: #6e6e6e;
-    position:relative;
+    position: relative;
     top: 2px;
 }
 
-#star-icon{
+#star-icon {
     color: #adadad;
-    position:relative;
+    position: relative;
     top: 2px;
 }
 
-#stared{
+#stared {
     color: #ffffff;
-    background-color:#adadad;
+    background-color: #adadad;
     border-radius: 3px;
     padding: 0px 4px 0 4px;
     margin-left: 4px;
 }
 
-#stared:hover{
-    background-color:#57c5a0;
+#stared:hover {
+    background-color: #57c5a0;
 }
 
-#in-cart{
+#in-cart {
     @extend #stared;
     background-color: #6e6e6e;
 }
 
-#register-footer{
+#register-footer {
     display: none;
 }
 
-#register-form{
+#register-form {
     display: none;
 }
 
-#terms-form{
+#terms-form {
     display: none;
 }
 
-.modal-header{
+.modal-header {
     padding: 0px 10px 0px 10px;
-    height:60px;
-    background-color:  #919191;
+    height: 60px;
+    background-color: #919191;
     display: flex;
-    flex-direction:flex-start;
+    flex-direction: flex-start;
 }
 
-.modal-btn-base{
-  font-family: "Logo-btns";
-  font-size: 14px;
-  color: black;
-  border-color: #4c4c4c;
-  border-style: solid;
-  border-width: 1px;
-  text-align: left;
-  padding-left: 8px;
+.modal-btn-base {
+    font-family: "Logo-btns";
+    font-size: 14px;
+    color: black;
+    border-color: #4c4c4c;
+    border-style: solid;
+    border-width: 1px;
+    text-align: left;
+    padding-left: 8px;
 }
 
 .modal-nav-btn {
-  @extend .modal-btn-base;
-  background-color: #7C7C7C;
-  height: 30px;
-  width: 120px;
-  position: relative;
-  bottom: -10px;
+    @extend .modal-btn-base;
+    background-color: #7C7C7C;
+    height: 30px;
+    width: 120px;
+    position: relative;
+    bottom: -10px;
 }
 
-.modal-nav-btn-active{
+.modal-nav-btn-active {
     @extend .modal-btn-base;
     background-color: white;
     height: 40px;
@@ -235,71 +382,64 @@
     bottom: -5px;
 }
 
-.modal-close-btn{
-  @extend .modal-btn-base;
-  background-color: #7C7C7C;
-  height: 40px;
-  width: 50px;
+.modal-close-btn {
+    @extend .modal-btn-base;
+    background-color: #7C7C7C;
+    height: 40px;
+    width: 50px;
 }
 
-.modal-signup-btn{
-  @extend .modal-btn-base;
-  background-color: #b1aeae;
-  height: 40px;
-  width: 70px;
+.modal-signup-btn {
+    @extend .modal-btn-base;
+    background-color: #b1aeae;
+    height: 40px;
+    width: 70px;
 }
 
-.modal-login-btn{
+.modal-login-btn {
     @extend .modal-btn-base;
     background-color: #b1aeae;
     height: 40px;
     width: 60px;
 }
 
-.pb-modalreglog-container
-{
+.pb-modalreglog-container {
     margin-top: 100px;
 }
 
-.pb-modalreglog-legend
-{
+.pb-modalreglog-legend {
     font-family: "Logo-btns";
     text-align: center;
 }
 
-.pb-modalreglog-input-group
-{
-    font-family:"Logo-btns";
+.pb-modalreglog-input-group {
+    font-family: "Logo-btns";
     margin: auto;
 }
 
-.pb-modalreglog-submit
-{
+.pb-modalreglog-submit {
     margin-left: 5px;
 }
 
-.pb-modalreglog-form-reg
-{
+.pb-modalreglog-form-reg {
     text-align: center;
 }
 
-.pb-modalreglog-footer p
-{
+.pb-modalreglog-footer p {
     text-align: center;
     margin-top: 20px;
 }
 
-#pb-modalreglog-progressbar
-{
+#pb-modalreglog-progressbar {
     border-radius: 0px;
 }
 
 .search-dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .search-dropdown-content {
+}
+
+.search-dropdown-content {
     font-family: "Logo-btns";
     font-size: 12px;
     display: none;
@@ -307,47 +447,50 @@
     background-color: #4c4c4c;
     width: 120px;
     overflow: auto;
-  }
-  
-  .search-dropdown-content a{
+}
+
+.search-dropdown-content a {
     color: #919191;
     padding: 12px 12px;
     padding-left: 8px;
     text-decoration: none;
     display: block;
-    border-style:solid;
+    border-style: solid;
     border-width: 1px;
-    border-bottom: #919191
-  }
+    border-bottom: #919191;
+}
 
-.logo-bar-btn{
+.logo-bar-btn {
     font-family: "Logo-btns";
     font-size: 12px;
     width: 120px;
     color: #b1aeae;
-    border-color:  #b1aeae;
+    border-color: #b1aeae;
     height: 37px;
     background-color: black;
-    border-style:solid;
+    border-style: solid;
     border-width: 1px;
     border-top: none;
-    border-bottom:none;
-    border-left:none;
+    border-bottom: none;
+    border-left: none;
     text-align: left;
     padding-left: 8px;
 }
-#logo-bar{
+
+#logo-bar {
     padding: 0px 100px 0px 100px;
     background-color: black;
     display: flex;
-}
-#logo-btn{
-    padding: 6px 0px 6px 0px;
-    width:520px;
-    border-right:1px solid #b1aeae;
+    width:960px;
 }
 
-#logo{
+#logo-btn {
+    padding: 6px 0px 6px 0px;
+    width: 520px;
+    border-right: 1px solid #b1aeae;
+}
+
+#logo {
     font-family: "Logo";
     color: #57c5a0;
     font-size: 18px;
@@ -355,51 +498,51 @@
     align-content: center;
 }
 
-@font-face {     
-    font-family: "Logo"; 
-    src: url("../fonts/STHeitiSC-Light.ttf") format("truetype"); 
+@font-face {
+    font-family: "Logo";
+    src: url("../fonts/STHeitiSC-Light.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: "Aller_BdIt"; 
-    src: url("../fonts/Aller_BdIt.ttf") format("truetype"); 
+@font-face {
+    font-family: "Aller_BdIt";
+    src: url("../fonts/Aller_BdIt.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: "Aller_It"; 
-    src: url("../fonts/Aller_It.ttf") format("truetype"); 
+@font-face {
+    font-family: "Aller_It";
+    src: url("../fonts/Aller_It.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: "Aller_Lt"; 
-    src: url("../fonts/Aller_Lt.ttf") format("truetype"); 
+@font-face {
+    font-family: "Aller_Lt";
+    src: url("../fonts/Aller_Lt.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: "Aller_LtIt"; 
-    src: url("../fonts/Aller_LtIt.ttf") format("truetype"); 
+@font-face {
+    font-family: "Aller_LtIt";
+    src: url("../fonts/Aller_LtIt.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: "Aller_Rg"; 
-    src: url("../fonts/Aller_Rg.ttf") format("truetype"); 
+@font-face {
+    font-family: "Aller_Rg";
+    src: url("../fonts/Aller_Rg.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: "Aller"; 
-    src: url("../fonts/Aller.ttf") format("truetype"); 
+@font-face {
+    font-family: "Aller";
+    src: url("../fonts/Aller.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: "AllerDisplay"; 
-    src: url("../fonts/AllerDisplay.ttf") format("truetype"); 
+@font-face {
+    font-family: "AllerDisplay";
+    src: url("../fonts/AllerDisplay.ttf") format("truetype");
 }
 
-@font-face {     
-    font-family: Logo-btns; 
-    src: url("../fonts/MyriadPro-Regular.otf") format("truetype"); 
+@font-face {
+    font-family: Logo-btns;
+    src: url("../fonts/MyriadPro-Regular.otf") format("truetype");
 }
 
-.c{
+.c {
     font-family: Logo;
 }
