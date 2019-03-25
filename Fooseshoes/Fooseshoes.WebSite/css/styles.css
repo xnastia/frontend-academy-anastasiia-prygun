@@ -1,21 +1,75 @@
 ﻿body {
   width: 960px; }
 
+.enterance {
+  margin-bottom: 10px; }
+
+.date {
+  background-color: #57c5a0;
+  width: 45px;
+  height: 40px;
+  color: white;
+  padding: 10px;
+  line-height: 10px;
+  text-align: center;
+  margin: 0px 10px 10px 0px;
+  float: left; }
+
+.blog-text {
+  padding-top: 0px;
+  height: 40px; }
+
+#blog-news {
+  font-family: Aller_Rg;
+  background-color: #dfdbd4;
+  font-size: 12px;
+  width: 360px;
+  padding: 30px 25px;
+  margin: 5px; }
+
+#blog-news header {
+  line-height: 12px; }
+
+.free-shipping {
+  font-family: Aller_Rg;
+  background-color: #dfdbd4;
+  font-size: 12px;
+  width: 240px;
+  padding: 30px 25px;
+  margin: 5px; }
+
+.free-shipping header {
+  line-height: 12px; }
+
+.info-content {
+  background-color: #ebe7df;
+  width: 960px;
+  padding: 25px 100px 25px 100px;
+  height: 265px;
+  display: flex;
+  border-top: 1px solid #bcb5a7; }
+
+.shoe-legend:hover .even-odd {
+  display: none; }
+
+.shoe-legend .icon-bar {
+  display: none; }
+
+.shoe-legend:hover .icon-bar {
+  display: block; }
+
 .shoe-image-icon {
-  border-style: none !important;
-  padding: 0px 15px !important;
-  height: 30px !important; }
+  height: 30px !important;
+  border: none !important;
+  padding-left: 13px !important; }
 
 .items {
-  height: 230px;
   display: flex;
   margin-top: 25px;
   margin-bottom: 25px;
   flex-wrap: wrap; }
 
 .out-of-stock, .sale {
-  position: relative;
-  top: -273px;
   margin-left: 178px;
   background-color: #f27e4b;
   width: 55px;

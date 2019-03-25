@@ -7,6 +7,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <script src="js/dropdowns.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/buildItemsList.js"></script>
     <script src="js/switchLoginRegister.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet">
     <script src="scripts/bootstrap.min.js"></script>
@@ -125,27 +126,33 @@
         </div>
         <div class="home-products">
             <div class="home-products-legend"><div>New arrivals on FooseShoes</div><a class="show-all-btn">Show All</a></div>
-            <div class="items">
-                <div class="shoe-with-discription">
-                    <div class="shoe"></div><div class="shoe-legend">
-                        <div class="icon-bar">
-                            <a class="shoe-image-icon"><i class="fa fa-eye slider-icon"></i></a>
-                            <a class="shoe-image-icon"><i class="far fa-star slider-icon"></i></a>
-                            <a class="shoe-image-icon"><i class="glyphicon glyphicon-log-out slider-icon"></i></a>
-                            <a class="shoe-image-icon"><i class="fa fa-cart-arrow-down slider-icon"></i></a>
-                        </div>
-                    </div><div class="shoe-price">$145,99</div><div class="out-of-stock">OUT OF STOCK</div>
-                </div>
-                <div class="shoe-with-discription"><div class="shoe"></div><div class="shoe-legend">Even&Odd</div><div class="shoe-price">$145,99</div><div class="sale">ON SALE!</div></div>
-                <div class="shoe-with-discription"><div class="shoe"></div><div class="shoe-legend">Even&Odd</div><div class="shoe-price">$145,99</div><div class="sale">ON SALE!</div></div>
+            <div class="items" id="new-arrivals-items">
+              <script>buildItemsList("new-arrivals-items", "jsons/newArrivals.json",3)</script>
             </div>
             <div class="home-products-legend"><div>Best sellers of the month</div><a class="show-all-btn">Show All</a></div>
-            <div class="items">
-                <div class="shoe-with-discription"><div class="shoe"></div><div class="shoe-legend">Even&Odd</div><div class="shoe-price">$145,99</div><div class="out-of-stock">OUT OF STOCK</div></div>
-                <div class="shoe-with-discription"><div class="shoe"></div><div class="shoe-legend">Even&Odd</div><div class="shoe-price">$145,99</div><div class="sale">ON SALE!</div></div>
-                <div class="shoe-with-discription"><div class="shoe"></div><div class="shoe-legend">Even&Odd</div><div class="shoe-price">$145,99</div><div class="sale">ON SALE!</div></div>
+            <div class="items" id="best-sellers">
+                <script>buildItemsList("best-sellers", "jsons/bestSellers.json",3)</script>          
             </div>
         </div>
+        <div class = "info-content"><div class="free-shipping"><header><b>FREE SHIPPING</b></header>
+            <br />Vivamus metus turpis bibendum, 
+            vitae euismod vel, vulputate vel nibh. Class abtent taciti sociosqu ad litora 
+            torquent per conubia nistra, per inceptos himenaeos. 
+            Donec erat sam,</div>
+            <div class="free-shipping">
+                <header><b>TESTIMONIALS</b></header>
+                <br />vel, vulputate vel nibh. Class abtent taciti sociosqu ad litora
+                torquent per conubia nistra, per inceptos himenaeos.
+                Donec erat sam, vehicula id dictum sit [...]
+                <br /><i>-John Doe-</i>
+            </div>
+        <div id="blog-news">
+            <header><b>BLOG NEWS</b></header>
+            <div class="enterance"><br /> <div class="date">APR 01</div><div class="blog-text"><b>Nice&clean. The best for your blog.</b> <br /> Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</div></div>
+            <div class="enterance"><br /> <div class="date">APR 01</div><div class="blog-text"><b>What an ecommerce theme!</b> <br />Vulputate vel nibh. Class aptent taciti sociosqu ad litora</div></div>
+        </div>
+        <div>
+            </div></div>
         <div class="container pb-modalreglog-container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-md-offset-4">

@@ -1,0 +1,20 @@
+﻿[
+  {
+    "image": "shoe4",
+    "price": "145,99",
+    "group": ""
+  },
+
+  {
+    "image": "shoe5",
+    "price": "145,99",
+    "group": ""
+  },
+
+  {
+    "image": "shoe6",
+    "price": "145,99",
+    "group": "out of stock"
+  }
+]
+
