@@ -15,22 +15,5 @@
     "group": "",
     "image": "shoe3",
     "price": "145,99"
-  },
-  {
-    "image": "shoe5",
-    "price": "145,99",
-    "group": ""
-  },
-
-  {
-    "image": "shoe6",
-    "price": "145,99",
-    "group": "on sale"
-  },
-
-  {
-    "image": "shoe4",
-    "price": "145,99",
-    "group": "out of stock"
-  }
+  }  
 ]

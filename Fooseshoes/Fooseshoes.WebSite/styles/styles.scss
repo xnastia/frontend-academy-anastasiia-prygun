@@ -2,12 +2,235 @@
     width: 960px;
 }
 
-.enterance{
+#social-icons{
+   display:flex;
+}
+
+#email-holder{
+    display:flex;
+}
+
+
+.fa-facebook {
+  background: #2e2e2e;
+  color: #7d7d7d;
+  padding: 7px 5px;
+  font-size: 20px !important;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  text-decoration: none;
+  margin:0px 2px 0px 2px;
+}
+
+.fa-flickr {
+  @extend .fa-facebook;
+}
+
+.fa-twitter {
+  @extend .fa-facebook;
+}
+
+.fa-google {
+  @extend .fa-facebook;
+}
+
+.fa-linkedin {
+  @extend .fa-facebook;
+}
+
+
+.social-icon{
+    width: 22px;
+    height: 25px;
+    font-size:15px;
+    color:#7d7d7d;
+    background-color: #2e2e2e;
+    padding-left: 6px;
+}
+
+#submit{
+    width: 32px;
+    height: 35px;
+    font-size:30px;
+    color: #2e2e2e;
+    background-color:#7d7d7d;
+    display:flex;
+    text-align:center;
+    padding: 5px;
+}
+
+#email-for-news{
+    font-family:Aller_BdIt;
+
+    width: 180px;
+    height: 35px;
+    background-color:#2e2e2e;
+    color:#7d7d7d;
+    border: solid 1px #7d7d7d;
+    border-radius: 0px;
+}
+
+#socials-nav{
+    background-color: #242424;
+    width: 960px;
+    padding: 30px 100px 30px 100px;
+    font-family: Aller_Rg;
+    font-size: 12px;
+    color: #a4a4a4;
+    display: flex;
+    border-top:solid 1px black;
+    height:100px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.flickr_badge_image {
+    margin: 0px;
+    display: inline;
+}
+
+.flickr_badge_image img {
+    border: 0px solid #000 !important;
+    padding: 1px;
+    margin: 1px;
+    width: 76px;
+    height: 60px;
+}
+
+#flickr_badge_wrapper {
+    width: 253px;
+    text-align: left;
+    margin: 0px 10px 0px 17px;
+    padding-top: 0px;
+}
+
+#tweet {
+    width: 253px !important;
+    border: none !important;
+}
+
+#tweet iframe {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.static-text {
+    width: 253px;
+    padding: 20px 20px 0px 20px;
+    text-align: justify;
+}
+
+#widgets {
+    background-color: #242424;
+    width: 960px;
+    padding: 30px 100px 30px 100px;
+    font-family: Aller_Rg;
+    font-size: 12px;
+    color: #a4a4a4;
+    display: flex;
+    justify-content:space-between;
+}
+
+.grid-btn {
+    color: #bcb5a7 !important;
+    font-family: Aller;
+    border-style: solid;
+    border-color: #bcb5a7;
+    border-width: 1px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 5px 4px 5px 4px;
+    height: 24px;
+    display: flex;
+    margin-right: 10px;
+}
+
+.grid-btn:hover {
+    border-color: #716e69;
+    color: #716e69 !important;
+}
+
+#sort-down-icon:hover {
+    border-color: #716e69;
+    color: #716e69 !important;
+}
+
+#sort-down-icon {
+    background-color: #bcb5a7;
+    border-radius: 7px;
+    width: 14px;
+    height: 13px;
+    color: #ebe7df;
+    font-size: 10px;
+    padding: 2px 2px 2px 2px;
+    margin-left: 10px;
+}
+
+.legend-group {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.products-text {
+    color: #bcb5a7;
+    font-family: Aller;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 8px 8px 8px 30px;
+}
+
+#products-page {
+    background-color: #ebe7df;
+    padding: 25px 100px 25px 100px;
+    display: none;
+}
+
+.down-icon {
+    background-color: white;
+    border-radius: 8px;
+    width: 16px;
+    height: 15px;
+    color: black;
+    font-size: 10px;
+    padding: 2px 2px 2px 3px;
+    margin-top: 2px;
+}
+
+.shop-by-btn {
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+    padding: 15px 20px 15px 40px;
+    background-color: #242424;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-by-text {
+    width: 175px;
+    height: 50px;
+    padding: 12px 50px;
+}
+
+#shop-by {
+    width: 960px;
+    height: 70px;
+    font-family: Aller_Rg;
+    font-size: 18px;
+    color: white;
+    padding: 10px 100px;
+    background-color: #2e2e2e;
+    display: none;
+}
+
+.enterance {
     margin-bottom: 10px;
 }
 
-.date{
-    background-color:#57c5a0;
+.date {
+    background-color: #57c5a0;
     width: 45px;
     height: 40px;
     color: white;
@@ -18,39 +241,38 @@
     float: left;
 }
 
-.blog-text{
-    
-    padding-top:0px;
+.blog-text {
+    padding-top: 0px;
     height: 40px;
 }
 
-#blog-news{
-    font-family:Aller_Rg;
-    background-color:#dfdbd4;
+#blog-news {
+    font-family: Aller_Rg;
+    background-color: #dfdbd4;
     font-size: 12px;
     width: 360px;
     padding: 30px 25px;
     margin: 5px;
 }
 
-#blog-news header{    
- line-height: 12px;
+#blog-news header {
+    line-height: 12px;
 }
 
-.free-shipping{
-    font-family:Aller_Rg;
-    background-color:#dfdbd4;
+.free-shipping {
+    font-family: Aller_Rg;
+    background-color: #dfdbd4;
     font-size: 12px;
     width: 240px;
     padding: 30px 25px;
     margin: 5px;
 }
 
-.free-shipping header{    
- line-height: 12px;
+.free-shipping header {
+    line-height: 12px;
 }
 
-.info-content{
+.info-content {
     background-color: #ebe7df;
     width: 960px;
     padding: 25px 100px 25px 100px;
@@ -60,31 +282,32 @@
 }
 
 .shoe-legend:hover .even-odd {
-  display: none
+    display: none;
 }
 
 .shoe-legend .icon-bar {
-  display: none
+    display: none;
 }
 
 .shoe-legend:hover .icon-bar {
-  display: block
+    display: block;
 }
-.shoe-image-icon{
+
+.shoe-image-icon {
     @extend .slider-image-icon;
     height: 30px !important;
     border: none !important;
     padding-left: 13px !important;
 }
 
-.items{
-    display:flex;
+.items {
+    display: flex;
     margin-top: 25px;
     margin-bottom: 25px;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
-.out-of-stock{
+.out-of-stock {
     margin-left: 178px;
     background-color: #f27e4b;
     width: 55px;
@@ -92,19 +315,19 @@
     font-family: Aller;
     color: white;
     padding-top: 15px;
-    line-height:13px;
+    line-height: 13px;
     font-size: 11px;
     text-align: center;
 }
 
-.sale{
+.sale {
     @extend .out-of-stock;
     padding-top: 20px;
     background-color: black;
 }
 
-.shoe-price{
-    position:relative;
+.shoe-price {
+    position: relative;
     top: -55px;
     margin-left: 10px;
     background-color: #57c5a0;
@@ -117,46 +340,55 @@
     text-align: center;
 }
 
-.shoe-legend{
+.shoe-legend {
     width: 243px;
     height: 40px;
-    background-color:white;
-    border-top-style:solid;
+    background-color: white;
+    border-top-style: solid;
     border-color: #cccccc;
-    border-width:1px;
+    border-width: 1px;
     font-family: Aller_Rg;
     padding: 8px 75px;
     font-size: 16px;
 }
 
-.shoe-with-discription{
+.shoe-with-discription {
     width: 253px;
     height: 218px;
     padding: 5px;
-    margin-bottom: 10px;       
+    margin-bottom: 10px;
 }
 
-.shoe{
+.shoe-with-discription-column-view {
+    width: 760px;
+    height: 218px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.shoe {
     background-image: url("../images/shoe1.jpg");
     width: 243px;
     height: 178px;
 }
 
-.show-all-btn{
+.show-all-btn {
     color: #bcb5a7 !important;
     font-family: Aller;
-    border-style:solid;
+    border-style: solid;
     border-color: #bcb5a7;
     border-width: 1px;
     font-size: 12px;
     line-height: 14px;
     padding: 4px 20px 4px 20px;
     height: 24px;
+    display: flex;
+    margin-left: 12px;
 }
 
-.show-all-btn:hover{
-border-color: #716e69;
-color: #716e69 !important;
+.show-all-btn:hover {
+    border-color: #716e69;
+    color: #716e69 !important;
 }
 
 .home-products-legend {
@@ -167,8 +399,8 @@ color: #716e69 !important;
     justify-content: space-between;
 }
 
-.home-products {
-    background-color:#ebe7df;
+#home-products {
+    background-color: #ebe7df;
     padding: 25px 100px 25px 100px;
 }
 
@@ -204,7 +436,7 @@ color: #716e69 !important;
     background-image: url("../images/special_offers.jpg");
 }
 
-.special-offers {
+#special-offers-bar {
     background-color: #242424;
     width: 960px;
     padding: 0px 100px 0px 100px;
@@ -332,7 +564,7 @@ color: #716e69 !important;
     margin-top: 4px;
 }
 
-.slider {
+#slider {
     width: 960px;
     height: 70px;
     background-color: #2e2e2e;
@@ -349,13 +581,19 @@ color: #716e69 !important;
     height: 45px;
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .nav-bar-btns {
     display: flex;
 }
 
-.nav-bar-btns a {
+nav-bar-btns a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-bar-btn {
     border-color: #eeeeee;
     border-style: solid;
     border-width: 1px;
@@ -366,6 +604,14 @@ color: #716e69 !important;
     padding-right: 10px;
     height: 45px;
     display: flex;
+}
+
+.nav-bar-btn-active {
+    @extend.nav-bar-btn;
+    color: #57c5a0 !important;
+}
+
+.icon-navbar-btn {
 }
 
 #cart-icon {
@@ -546,7 +792,7 @@ color: #716e69 !important;
     padding: 0px 100px 0px 100px;
     background-color: black;
     display: flex;
-    width:960px;
+    width: 960px;
 }
 
 #logo-btn {
@@ -608,6 +854,3 @@ color: #716e69 !important;
     src: url("../fonts/MyriadPro-Regular.otf") format("truetype");
 }
 
-.c {
-    font-family: Logo;
-}
