@@ -42,11 +42,11 @@
             <div id="logo-nav-btns">
                 <div class="search-dropdown" id="search-dropdown-logo-bar">
                     <div id="logo-bar-search-btn">
-                        <button type="button" onclick="showDropdown('search-dropdown')" class="logo-bar-btn">
+                        <button type="button" onclick="showDropdown('search-dropdown')" class="logo-bar-btn dropdown-btn" id="logo-bar-search">
                             <div>SEARCH</div> <i class="material-icons expand-icon">search</i>
                         </button>
                     </div>
-                    <div id="search-dropdown" class="search-dropdown-content">
+                    <div id="search-dropdown" class="search-dropdown-content dropdown-content">
                     </div>
                 </div>
                 <div id="logo-bar-login-btn">
@@ -66,9 +66,9 @@
                 <a class="nav-bar-btn" id="contact" onclick="onNavBarBtnClick(this.id)">Contact</a>
             </div>
             <div class="nav-dropdown" id="nav-dropdown-el">
-                <button class="nav-dropbtn" onclick="showNavDropdown()">Dropdown</button>
-                <div class="nav-dropdown-content" id="nav-dropdown">
-                    <a class="dropdown-nav-bar-btn" id="home" onclick="onHomeBtnClick()">Home</a>
+                <button class="nav-dropbtn dropdown-btn" onclick="showNavDropdown()"><i class="material-icons">menu</i></button>
+                <div class="nav-dropdown-content dropdown-content" id="nav-dropdown">
+                    <a id="home" onclick="onHomeBtnClick()">Home</a>
                     <a class="dropdown-nav-bar-btn" id="products" onclick="onProductsBtnClick()">Products</a>
                     <a class="dropdown-nav-bar-btn" id="about" onclick="onNavBarBtnClick(this.id)">About</a>
                     <a class="dropdown-nav-bar-btn" id="pages" onclick="onNavBarBtnClick(this.id)">Pages</a>
