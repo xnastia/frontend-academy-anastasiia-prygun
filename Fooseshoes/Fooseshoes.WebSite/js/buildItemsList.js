@@ -41,6 +41,11 @@ function inlineView() {
 }
 
 function blockView() {
-    document.getElementById("products-items").innerHTML="";
-    buildItemsList("products-items", "jsons/products.json")
+    /*document.getElementById("products-items").innerHTML="";
+    buildItemsList("products-items", "jsons/products.json")*/
+    var shoes = document.getElementsByClassName("shoe-with-discription-column-view");
+    for (var i = shoes.length-1; i > 0; i--) {
+        shoes[i].classList.add("shoe-with-discription");
+        shoes[i].classList.remove("shoe-with-discription-column-view");
+    }
 }

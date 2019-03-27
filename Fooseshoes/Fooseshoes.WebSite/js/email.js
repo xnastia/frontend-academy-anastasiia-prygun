@@ -2,9 +2,11 @@
     var emailElement = document.getElementById("email-for-news");
     var email = emailElement.value;
     if (validateEmail(email)) {
-
+        document.getElementById("incorrect-email").style.display = "none";
+        document.getElementById("correct-email").style.display = "block";
     } else {
-
+        document.getElementById("correct-email").style.display = "none";
+        document.getElementById("incorrect-email").style.display = "block";
     }
 }
 

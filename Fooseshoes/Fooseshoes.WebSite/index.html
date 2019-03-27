@@ -6,7 +6,12 @@
     <title></title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/modals.css" rel="stylesheet">
+    <link href="css/navigation.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
     <script src="js/dropdowns.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/navBar.js"></script>
@@ -23,6 +28,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script sync src="http://ctrlq.org/code/19933-embed-tweet-with-javascript"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -33,29 +39,42 @@
             <div id="logo-btn">
                 <a href="index.html" id="logo">FOOSESHOES</a>
             </div>
-            <div class="search-dropdown">
-                <div id="logo-bar-search-btn">
-                    <button type="button" onclick="showDropdown('search-dropdown')" class="logo-bar-btn">
-                        SEARCH
+            <div id="logo-nav-btns">
+                <div class="search-dropdown" id="search-dropdown-logo-bar">
+                    <div id="logo-bar-search-btn">
+                        <button type="button" onclick="showDropdown('search-dropdown')" class="logo-bar-btn">
+                            <div>SEARCH</div> <i class="material-icons expand-icon">search</i>
+                        </button>
+                    </div>
+                    <div id="search-dropdown" class="search-dropdown-content">
+                    </div>
+                </div>
+                <div id="logo-bar-login-btn">
+                    <button type="button" class="logo-bar-btn" data-toggle="modal" data-target="#login-modal">
+                        LOGIN or REGISTER
                     </button>
                 </div>
-                <div id="search-dropdown" class="search-dropdown-content">
-                </div>
-            </div>
-            <div id="logo-bar-login-btn">
-                <button type="button" class="logo-bar-btn" data-toggle="modal" data-target="#myModal">
-                    LOGIN or REGISTER
-                </button>
             </div>
         </div>
         <div id="nav-bar">
-            <div class="nav-bar-btns">
+            <div class="nav-bar-btns" id="nav-bar-btns">
                 <a class="nav-bar-btn-active" id="home" onclick="onHomeBtnClick()">Home</a>
                 <a class="nav-bar-btn" id="products" onclick="onProductsBtnClick()">Products</a>
                 <a class="nav-bar-btn" id="about" onclick="onNavBarBtnClick(this.id)">About</a>
                 <a class="nav-bar-btn" id="pages" onclick="onNavBarBtnClick(this.id)">Pages</a>
                 <a class="nav-bar-btn" id="blog" onclick="onNavBarBtnClick(this.id)">Blog</a>
                 <a class="nav-bar-btn" id="contact" onclick="onNavBarBtnClick(this.id)">Contact</a>
+            </div>
+            <div class="nav-dropdown" id="nav-dropdown-el">
+                <button class="nav-dropbtn" onclick="showNavDropdown()">Dropdown</button>
+                <div class="nav-dropdown-content" id="nav-dropdown">
+                    <a class="dropdown-nav-bar-btn" id="home" onclick="onHomeBtnClick()">Home</a>
+                    <a class="dropdown-nav-bar-btn" id="products" onclick="onProductsBtnClick()">Products</a>
+                    <a class="dropdown-nav-bar-btn" id="about" onclick="onNavBarBtnClick(this.id)">About</a>
+                    <a class="dropdown-nav-bar-btn" id="pages" onclick="onNavBarBtnClick(this.id)">Pages</a>
+                    <a class="dropdown-nav-bar-btn" id="blog" onclick="onNavBarBtnClick(this.id)">Blog</a>
+                    <a class="dropdown-nav-bar-btn" id="contact" onclick="onNavBarBtnClick(this.id)">Contact</a>
+                </div>
             </div>
             <div class="nav-bar-btns">
                 <a class="nav-bar-btn"><i class="far fa-star" id="star-icon"></i>
@@ -147,13 +166,12 @@
         </div>
         <div id="shop-by">
             <div class="shop-by-text">Shop by</div>
-            <div class="shop-by-btn">Brands<div class="down-icon"><span class="glyphicon glyphicon-chevron-down"></span>
+            <div class="shop-by-btn">Brands<div class="down-icon"><i class="material-icons expand-icon">expand_more</i>
                 </div>
             </div>
-            <div class="shop-by-btn">Categories<div class="down-icon"><span
-                        class="glyphicon glyphicon-chevron-down"></span></div>
+            <div class="shop-by-btn">Categories<div class="down-icon"><i class="material-icons expand-icon">expand_more</i></div>
             </div>
-            <div class="shop-by-btn">Price <div class="down-icon"><span class="glyphicon glyphicon-chevron-down"></span>
+            <div class="shop-by-btn">Price <div class="down-icon"><i class="material-icons expand-icon">expand_more</i>
                 </div>
             </div>
         </div>
@@ -181,8 +199,7 @@
                     <div class="products-text">View as</div>
                     <div class="grid-btn" onclick="blockView()"><span class="fa fa-th-large"></span></div>
                     <div class="grid-btn" onclick="inlineView()"><span class="fa fa-list"></span></div>
-                    <a class="show-all-btn">Sort alphabetically <div id="sort-down-icon"><span
-                                class="glyphicon glyphicon-chevron-down"></span></div></a>
+                    <a class="show-all-btn">Sort alphabetically <div id="sort-down-icon"><i class="material-icons expand-icon">expand_more</i></div></a>
                 </div>
             </div>
             <div class="items" id="products-items">
@@ -197,7 +214,7 @@
                 torquent per conubia nistra, per inceptos himenaeos.
                 Donec erat sam,
             </div>
-            <div class="free-shipping">
+            <div class="free-shipping" id="testimonials">
                 <header><b>TESTIMONIALS</b></header>
                 <br />vel, vulputate vel nibh. Class abtent taciti sociosqu ad litora
                 torquent per conubia nistra, per inceptos himenaeos.
@@ -249,34 +266,37 @@
             <div id="email-holder"> 
                 <input type="email" id="email-for-news" name="Email"
                     placeholder="Enter email for newsletter">
-                <div id="submit">
+                <div id="submit" data-toggle="modal" data-target="#sign-up-modal">
                     <i class="material-icons" onclick="getEmail()">&#xe5cc;</i>
                 </div>
             </div>
                 <div id="social-icons">
                     <div>
-                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
                     </div>
                     <div >
-                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="https://twitter.com/" class="fa fa-twitter"></a>
                     </div>
                     <div>
                         <a href="#" class="fa fa-google"></a>
                     </div>
                     <div>
-                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
                     </div>
                     <div >
-                        <a href="#" class="fa fa-flickr"></a>
+                        <a href="https://www.flickr.com/" class="fa fa-flickr"></a>
                     </div>
                 </div>
-            </div>            
-       
+            </div>
+        <div id="bottom-bar">
+            <div id="copyright">Copyright &copy; Fooseshoes 2013. Designed by EnzoliVolti</div>
+            <div id="botom-bar-nav"><a>Home</a>/<a>Support</a>/<a>Terms&Conditions</a>/<a>Faqs</a>/<a>Contact us</a></div>
+        </div>
     </footer>
     <div class="container pb-modalreglog-container">
         <div class="row">
             <div class="col-xs-12 col-md-4 col-md-offset-4">
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -377,6 +397,44 @@
                                 <button type="button" class="modal-login-btn">
                                     Log in
                                 </button>
+                            </div>
+                            <div class="modal-footer" id="register-footer">
+                                <button type="button" class="modal-close-btn" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="modal-signup-btn">
+                                    Sign up
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-modalreglog-container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-md-offset-4">
+                <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="input-group pb-modalreglog-input-group" id="modal-header">                                    
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body" id="subscribe-modal-body">
+                                <div id="incorrect-email">Incorrect email. Please try again.</div>
+                                <div id="correct-email">Thank you for subscription.</div>
+                            </div>
+                            <div class="modal-footer" id="login-footer">
+                                <button type="button" class="modal-close-btn" data-dismiss="modal">
+                                    Close
+                                </button>                                
                             </div>
                             <div class="modal-footer" id="register-footer">
                                 <button type="button" class="modal-close-btn" data-dismiss="modal">

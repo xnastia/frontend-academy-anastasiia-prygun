@@ -1,0 +1,231 @@
+﻿@media only screen and (min-width: 320px) and (max-width: 768px) {
+.nav-dropbtn {
+  border-color: #eeeeee;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    border-bottom: none;
+    padding: 14px 16px 14px 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 45px;
+    display: flex;
+    background-color:white;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+    }
+
+#nav-dropdown-el{
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 960px) {
+        display: none;
+    }
+}
+
+
+#nav-bar-btns{
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        display:none;
+    }
+}
+
+#nav-bar {
+    font-family: "Aller_Rg";
+    font-size: 13px;
+    background-color: white;
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        width: 100%;
+        padding: 0px 7% 0 7%;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        width: 768px;
+        padding: 0px 80px 0 80px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        width: 960px;
+        padding: 0px 100px 0 100px;
+    }   
+
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav-bar-btns {
+    display: flex;
+}
+
+nav-bar-btns a {
+    color: black;
+    text-decoration: none;
+}
+
+button:active, 
+button:focus {
+    outline: none !important;
+}
+
+input:active, 
+input:focus {
+    outline: none !important;
+}
+
+.nav-bar-btn {
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    border-bottom: none;
+    padding: 14px 16px 14px 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 45px;
+    display: flex;
+}
+
+.nav-bar-btn-active {
+    @extend.nav-bar-btn;
+    color: #57c5a0 !important;
+}
+
+.icon-navbar-btn {
+}
+
+#cart-icon {
+    color: #6e6e6e;
+    position: relative;
+    top: 2px;
+}
+
+#star-icon {
+    color: #adadad;
+    position: relative;
+    top: 2px;
+}
+
+#stared {
+    color: #ffffff;
+    background-color: #adadad;
+    border-radius: 3px;
+    padding: 0px 4px 0 4px;
+    margin-left: 4px;
+}
+
+#stared:hover {
+    background-color: #57c5a0;
+}
+
+#in-cart {
+    @extend #stared;
+    background-color: #6e6e6e;
+}
+
+
+.search-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.search-dropdown-content {
+    font-family: "Logo-btns";
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #4c4c4c;
+    width: 119px;
+    overflow: auto;
+}
+
+#search-dropdown-logo-bar{
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        display:none;
+    } 
+}
+
+.search-dropdown-content a {
+    color: #919191;
+    padding: 12px 12px;
+    padding-left: 8px;
+    text-decoration: none;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: #919191;
+}
+
+.logo-bar-btn {
+    font-family: "Logo-btns";
+    font-size: 12px;
+    width: 119px;
+    color: #b1aeae;
+    border-color: #b1aeae;
+    height: 37px;
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    border-bottom: none;
+    text-align: left;
+    padding-left: 8px;
+    display:flex;
+    justify-content:space-between;
+}
+
+#logo-bar {
+    background-color: black;
+    display: flex;
+    justify-content:space-between;
+    height:37px;
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        width: 100%;
+        padding: 0px 7% 0 7%;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        width: 768px;
+        padding: 0px 80px 0 80px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        width: 960px;
+        padding: 0px 100px 0 100px;
+    } 
+}
+
+#logo-btn {
+    padding: 6px 0px 6px 0px;
+    width: 115px;
+}
+
+#logo-nav-btns{
+    display: flex;
+}
+
+#logo {
+    font-family: "Logo";
+    color: #57c5a0;
+    font-size: 18px;
+    text-decoration: none;
+    align-content: center;
+}

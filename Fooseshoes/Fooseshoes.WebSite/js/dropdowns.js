@@ -13,6 +13,10 @@ function showDropdown(id) {
   );
     }    
 }
+
+function showNavDropdown() {
+    document.getElementById("nav-dropdown").style.display = "block";
+}
   
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(event) {

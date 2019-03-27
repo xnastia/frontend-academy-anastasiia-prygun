@@ -1,0 +1,489 @@
+﻿.grid-btn {
+    color: #bcb5a7 !important;
+    font-family: Aller;
+    border-style: solid;
+    border-color: #bcb5a7;
+    border-width: 1px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 5px 4px 5px 4px;
+    height: 24px;
+    display: flex;
+    margin-right: 10px;
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      margin-right: 5px;
+    }
+
+    @media only screen and (min-width: 960px) {
+     margin-right: 10px;
+    }
+}
+
+.grid-btn:hover {
+    border-color: #716e69;
+    color: #716e69 !important;
+}
+
+#sort-down-icon:hover {
+    border-color: #716e69;
+    color: #716e69 !important;
+}
+
+#sort-down-icon {
+    background-color: #bcb5a7;
+    border-radius: 7px;
+    width: 15px;
+    height: 15px;
+    color: #ebe7df;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.legend-group {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.products-text {
+    color: #bcb5a7;
+    font-family: Aller;
+    font-size: 12px;
+    line-height: 14px;
+    
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      padding: 8px 8px 8px 24px;
+    }
+
+    @media only screen and (min-width: 960px) {
+     padding: 8px 8px 8px 30px;
+    }
+}
+
+#products-page {
+    background-color: #ebe7df;
+    display: none;
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      padding: 25px 80px 25px 80px;
+      width:768px;
+    }
+
+    @media only screen and (min-width: 960px) {
+     padding: 25px 100px 25px 100px;
+     width:960px;
+    }
+}
+
+.expand-icon {
+    font-size: 16px !important;
+}
+
+.down-icon {
+    background-color: white;
+    border-radius: 8px;
+    width: 16px;
+    height: 15px;
+    color: black;
+    font-size: 10px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.shop-by-btn {
+    height: 50px;
+    font-size: 14px;
+    background-color: #242424;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      width: 144px;
+      padding: 15px 10px 15px 15px;
+    }
+
+    @media only screen and (min-width: 960px) {
+     width: 180px;
+     padding: 15px 20px 15px 40px;
+    }
+}
+
+.shop-by-text {
+    width: 175px;
+    height: 50px;
+    padding: 12px 50px;
+}
+
+#shop-by {
+    height: 70px;
+    font-family: Aller_Rg;
+    font-size: 18px;
+    color: white;
+    background-color: #2e2e2e;
+    display: none;
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      width: 768px;
+      padding: 10px 80px;
+    }
+
+    @media only screen and (min-width: 960px) {
+     width: 960px;
+     padding: 10px 100px;
+    }
+}
+
+.enterance {
+    margin-bottom: 10px;
+}
+
+.date {
+    background-color: #57c5a0;
+    width: 45px;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    line-height: 10px;
+    text-align: center;
+    margin: 0px 10px 10px 0px;
+    float: left;
+}
+
+.blog-text {
+    padding-top: 0px;
+    height: 40px;
+}
+
+#blog-news {
+    font-family: Aller_Rg;
+    background-color: #dfdbd4;
+    font-size: 12px;
+    width: 360px;
+    padding: 30px 25px;
+    margin: 5px;
+}
+
+#blog-news header {
+    line-height: 12px;
+}
+
+.free-shipping {
+    font-family: Aller_Rg;
+    background-color: #dfdbd4;
+    font-size: 12px;
+    width: 240px;
+    padding: 30px 25px;
+    margin: 5px;
+}
+
+.free-shipping header {
+    line-height: 10px;
+}
+
+.info-content {
+    background-color: #ebe7df;
+    display: flex;
+    border-top: 1px solid #bcb5a7;
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+    width: 768px;
+    padding: 20px 80px 20px 80px;
+    }
+
+    @media only screen and (min-width: 960px) {
+    width: 960px;
+    padding: 25px 100px 25px 100px;
+    }
+}
+
+#testimonials{
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        display:none;
+    }
+
+    @media only screen and (min-width: 960px) {
+     display:block;
+    }
+}
+
+.shoe-legend:hover .even-odd {
+    display: none;
+}
+
+.shoe-legend .icon-bar {
+    display: none;
+    position: relative !important;
+    top: 1px !important;
+}
+
+.shoe-legend:hover .icon-bar {
+    display: block;
+}
+
+.shoe-image-icon {
+    background-color: white;
+    font: #cccccc;
+    
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+     padding: 10px 5px 5px 8px;
+     font-size: 11px;
+     width: 28px;
+     height: 28px;
+    }
+
+    @media only screen and (min-width: 960px) {
+     padding: 13px 6px 6px 10px;
+     font-size: 14px;
+     width: 35px;
+     height: 30px;
+    }
+}
+
+.items {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.out-of-stock {
+    background-color: #f27e4b;
+    font-family: Aller;
+    color: white;    
+    text-align: center;
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      padding-top: 12px;
+    line-height: 10px;
+    font-size: 8px;
+    width: 44px;
+    height: 44px;
+    margin-left: 142px;
+    }
+
+    @media only screen and (min-width: 960px) {
+      padding-top: 15px;
+    line-height: 13px;
+    font-size: 11px;
+    width: 55px;
+    height: 55px;
+    margin-left: 178px;
+    }
+}
+
+.sale {
+    @extend .out-of-stock;
+    background-color: black;
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      padding-top: 16px;
+    }
+
+    @media only screen and (min-width: 960px) {
+      padding-top: 20px;
+    }
+}
+
+.shoe-price {
+    position: relative;
+    background-color: #57c5a0;
+    font-family: Logo-btns;
+    color: white;
+    text-align: center;
+    
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+    padding-top: 17px;
+    font-size: 10px;
+    width: 44px;
+    height: 44px;
+    top: -44px;
+    margin-left: 8px;
+    }
+
+    @media only screen and (min-width: 960px) {
+    padding-top: 21px;
+    font-size: 13px;
+    width: 55px;
+    height: 55px;
+    top: -55px;
+    margin-left: 10px;
+    }
+}
+
+.shoe-legend {
+    background-color: white;
+    border-top-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    font-family: Aller_Rg;
+        
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+    padding: 7px 60px;
+    font-size: 13px;
+    width: 194px;
+    height: 32px;
+    }
+
+    @media only screen and (min-width: 960px) {
+    padding: 8px 75px;
+    font-size: 16px;
+    width: 243px;
+    height: 40px;
+    }
+}
+
+.shoe-with-discription {
+    
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+    width: 202px;
+    height: 174px;
+    padding: 4px;
+    margin-bottom: 8px;
+    }
+
+    @media only screen and (min-width: 960px) {
+    width: 253px;
+    height: 218px;
+    padding: 5px;
+    margin-bottom: 10px;
+    }
+}
+
+.shoe-with-discription-column-view {
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        width: 608px;
+    height: 174px;
+    padding: 4px;
+    margin-bottom: 8px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        width: 760px;
+    height: 218px;
+    padding: 5px;
+    margin-bottom: 10px;
+    }
+}
+
+.shoe {
+    background-image: url("../images/shoe1.jpg");
+    
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+    width: 194px;
+    height: 142px;
+    background-size:contain;
+    }
+
+    @media only screen and (min-width: 960px) {
+     width: 243px;
+    height: 178px;
+    }
+}
+
+.show-all-btn {
+    color: #bcb5a7 !important;
+    font-family: Aller;
+    border-style: solid;
+    border-color: #bcb5a7;
+    border-width: 1px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 4px 20px 4px 20px;
+    height: 24px;
+    display: flex;
+    margin-left: 12px;
+}
+
+.show-all-btn:hover {
+    border-color: #716e69;
+    color: #716e69 !important;
+}
+
+.home-products-legend {
+    font-family: Aller_Lt;
+    font-size: 22px;
+    line-height: 22px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#home-products {
+    background-color: #ebe7df;
+     @media only screen and (min-width: 768px) and (max-width: 960px) {
+        padding: 25px 80px 25px 80px;
+        width: 768px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        padding: 25px 100px 25px 100px;
+        width: 960px;
+    }
+}
+
+.special-offers-item-badge {
+    font-family: Aller_Lt;
+    color: white;
+    display: inline-block;
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        font-size: 19px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 14px 16px 8px 16px;
+        line-height: 19px;
+        margin-top: 50px;
+        height: 45px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px 20px 10px 20px;
+        line-height: 24px;
+        margin-top: 50px;
+        height: 45px;
+    }
+}
+
+.special-offers-item {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        width: 194px;
+        height: 145px;
+        margin: 8px 5px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        width: 243px;
+        height: 145px;
+        margin: 10px 4px;
+    }
+}
+
+#on-sale {
+    background-image: url("../images/on_sale.jpg");
+}
+
+#must-have {
+    background-image: url("../images/must_have.jpg");
+}
+
+#special-offers {
+    background-image: url("../images/special_offers.jpg");
+}
+
+#special-offers-bar {
+    background-color: #242424;
+    display: flex;
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        width: 768px;
+        padding: 0px 80px 0px 80px;
+        height: 165px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        width: 960px;
+        padding: 0px 100px 0px 100px;
+        height: 165px;
+    }
+}

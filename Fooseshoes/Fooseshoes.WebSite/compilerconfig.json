@@ -1,6 +1,26 @@
 ﻿[
   {
-    "inputFile": "styles/styles.scss",
-    "outputFile": "css/styles.css"
+    "inputFile": "styles/fonts.scss",
+    "outputFile": "css/fonts.css"
+  },
+  {
+    "inputFile": "styles/footer.scss",
+    "outputFile": "css/footer.css"
+  },  
+  {
+    "inputFile": "styles/modals.scss",
+    "outputFile": "css/modals.css"
+  },
+  {
+    "inputFile": "styles/navigation.scss",
+    "outputFile": "css/navigation.css"
+  },
+  {
+    "inputFile": "styles/slider.scss",
+    "outputFile": "css/slider.css"
+  },
+  {
+    "inputFile": "styles/main.scss",
+    "outputFile": "css/main.css"
   }
 ]
