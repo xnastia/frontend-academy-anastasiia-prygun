@@ -1,12 +1,21 @@
 ﻿function getEmail() {
-    var emailElement = document.getElementById("email-for-news");
-    var email = emailElement.value;
+    var email = $("#email-for-news").val()
     if (validateEmail(email)) {
-        document.getElementById("incorrect-email").style.display = "none";
-        document.getElementById("correct-email").style.display = "block";
+        $("#incorrect-email").hide()
+        $("#correct-email").show();
+
+        $.ajax({
+            type: "POST",
+            crossDomain: true,
+            url: "http://localhost:8282/Home/Create",
+            data: { email: email },
+            dataType: "json"
+        }).always(function () {
+            $("#email-for-news").val()
+        })
     } else {
-        document.getElementById("correct-email").style.display = "none";
-        document.getElementById("incorrect-email").style.display = "block";
+        $("#correct-email").hide();
+        $("#incorrect-email").show()
     }
 }
 

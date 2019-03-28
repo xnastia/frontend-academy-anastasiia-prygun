@@ -20,9 +20,15 @@
 
 #copyright {
   width: 200px; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #copyright {
+      display: none; } }
 
 #social-icons {
   display: flex; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #social-icons {
+      justify-content: center; } }
 
 #email-holder {
   display: flex; }
@@ -60,6 +66,9 @@
   display: flex;
   text-align: center;
   padding: 5px; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #submit {
+      display: none; } }
 
 #email-for-news {
   font-family: Aller_BdIt;
@@ -70,6 +79,9 @@
   border: solid 1px #7d7d7d;
   border-radius: 0px;
   padding-left: 5px; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #email-for-news {
+      display: none; } }
 
 #socials-nav {
   background-color: #242424;
@@ -78,17 +90,24 @@
   color: #a4a4a4;
   display: flex;
   border-top: solid 1px black;
-  height: 100px;
-  display: flex;
-  justify-content: space-between; }
+  height: 100px; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #socials-nav {
+      display: block;
+      justify-content: center;
+      padding: 30px 20% 30px 20%; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     #socials-nav {
       width: 768px;
-      padding: 30px 80px 30px 80px; } }
+      padding: 30px 80px 30px 80px;
+      display: flex;
+      justify-content: space-between; } }
   @media only screen and (min-width: 960px) {
     #socials-nav {
       width: 960px;
-      padding: 30px 100px 30px 100px; } }
+      padding: 30px 100px 30px 100px;
+      display: flex;
+      justify-content: space-between; } }
 
 .flickr_badge_image {
   margin: 0px;
@@ -135,6 +154,9 @@
   color: #a4a4a4;
   display: flex;
   justify-content: space-between; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #widgets {
+      display: none; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     #widgets {
       width: 768px;

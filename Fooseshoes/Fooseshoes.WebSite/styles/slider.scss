@@ -1,13 +1,34 @@
-﻿
-.icon-bar {    
+﻿.wrapper{
+    display:flex;
+    height:80px;
+}
+
+.text-wrapper{
+    padding: 0px 10px;
+    white-space:nowrap;
+}
+
+.product-price{
+   @extend .price;
+   margin-top: 10px;
+}
+
+
+.icon-bar {
     display: flex;
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        width: 160px;
+        height: 32px;
+    }
+
 
     @media only screen and (min-width: 768px) and (max-width: 960px) {
         width: 160px;
         height: 32px;
     }
 
-    @media only screen and (min-width: 960px) {    
+    @media only screen and (min-width: 960px) {
         width: 200px;
         height: 40px;
     }
@@ -24,14 +45,21 @@
     width: 35px;
     height: 35px;
 
-    @media only screen and (min-width: 768px) and (max-width: 960px) {
-        padding: 5px 5px 5px 8px;
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        padding: 6px 5px 5px 8px;
         font-size: 11px;
         width: 28px;
         height: 28px;
     }
 
-    @media only screen and (min-width: 960px) {    
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        padding: 6px 5px 5px 8px;
+        font-size: 11px;
+        width: 28px;
+        height: 28px;
+    }
+
+    @media only screen and (min-width: 960px) {
         padding: 6px 6px 6px 10px;
         font-size: 14px;
         width: 35px;
@@ -52,7 +80,15 @@
     font-family: Logo-btns;
     color: white;
     text-align: center;
-        
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+         margin-bottom: 10px;
+        padding-top: 17px;
+        font-size: 11px;
+        width: 48px;
+        height: 44px;
+    }
+
     @media only screen and (min-width: 768px) and (max-width: 960px) {
         margin-bottom: 10px;
         padding-top: 17px;
@@ -61,19 +97,22 @@
         height: 44px;
     }
 
-    @media only screen and (min-width: 960px) {    
+    @media only screen and (min-width: 960px) {
         margin-bottom: 13px;
         padding-top: 21px;
         font-size: 13px;
         width: 60px;
         height: 55px;
     }
-
 }
 
 .slider-text-header {
     font-family: Logo;
-    
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        font-size: 24px;
+        line-height: 24px;
+        width: 80%;
+    }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
         font-size: 24px;
         line-height: 24px;
@@ -89,7 +128,7 @@
 
 .slider-ordinar-text {
     font-family: Logo;
-    float: left;    
+    float: left;
 
     @media only screen and (min-width: 768px) and (max-width: 960px) {
         font-size: 14px;
@@ -102,17 +141,20 @@
         line-height: 20px;
         padding-right: 82px;
     }
-
 }
 
 .slider-text {
-    
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+     padding: 5% 10% 10% 10%;
+        }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-        padding: 32px 70px 0px 350px;
+        padding: 32px 0px 0px 350px;
+        width:768px;
     }
 
     @media only screen and (min-width: 960px) {
-        padding: 40px 80px 0px 515px;
+        padding: 40px 0px 0px 515px;
+        width:960px;
     }
 }
 
@@ -130,7 +172,6 @@
 
 .slider-status-legend {
     font-family: Logo-btns;
-    font-size: 9px;
     color: #979797;
     font-size: 11px;
     line-height: 0px;
@@ -140,9 +181,40 @@
     display: none;
 }
 
-.slides-active {
-    background-image: url("../images/background.jpg");
+.product-slide{
+    background: url("../images/background.jpg") no-repeat;
     display: flex;
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        background: url("../images/background.jpg") no-repeat;
+        display: flex;      
+        background-position:bottom left 25%;
+        height:185px;
+        }
+
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        width: 768px;
+        background-position:bottom left;
+        height:195px;
+    }
+
+    @media only screen and (min-width: 960px) {
+        width: 960px;
+        background-position:bottom left;
+        height:210px;
+    }
+
+}
+.slides-active {
+    background: url("../images/background.jpg") no-repeat;
+    display: flex;
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        background: url("../images/background.jpg") no-repeat;
+        display: flex;
+        height: 315px;       
+        background-position:top left 25%;
+        }
 
     @media only screen and (min-width: 768px) and (max-width: 960px) {
         width: 768px;
@@ -153,7 +225,6 @@
         width: 960px;
         height: 315px;
     }
-
 }
 
 .slider-button {
@@ -211,8 +282,12 @@
 
 #slider {
     height: 70px;
-    background-color: #2e2e2e;    
+    background-color: #2e2e2e;
     display: flex;
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        display: none;
+    }
 
     @media only screen and (min-width: 768px) and (max-width: 960px) {
         width: 768px;
@@ -222,5 +297,5 @@
     @media only screen and (min-width: 960px) {
         width: 960px;
         padding: 0px 265px 0px 220px;
-    } 
+    }
 }

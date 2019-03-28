@@ -53,6 +53,9 @@
 #products-page {
   background-color: #ebe7df;
   display: none; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #products-page {
+      display: none; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     #products-page {
       padding: 25px 80px 25px 80px;
@@ -74,41 +77,61 @@
   font-size: 10px;
   margin-top: 2px;
   display: flex; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .down-icon {
+      display: none; } }
 
 .shop-by-btn {
   height: 50px;
   font-size: 14px;
   background-color: #242424;
-  margin-left: 10px;
   display: flex;
   justify-content: space-between; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .shop-by-btn {
+      width: 80px;
+      padding: 15px 10px 15px 20px;
+      font-size: 10px; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     .shop-by-btn {
       width: 144px;
-      padding: 15px 10px 15px 15px; } }
+      padding: 15px 10px 15px 15px;
+      font-size: 14px;
+      margin-left: 10px; } }
   @media only screen and (min-width: 960px) {
     .shop-by-btn {
       width: 180px;
-      padding: 15px 20px 15px 40px; } }
+      padding: 15px 20px 15px 40px;
+      font-size: 14px;
+      margin-left: 10px; } }
 
 .shop-by-text {
   width: 175px;
   height: 50px;
   padding: 12px 50px; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .shop-by-text {
+      display: none; } }
 
 #shop-by {
-  height: 70px;
   font-family: Aller_Rg;
   font-size: 18px;
   color: white;
   background-color: #2e2e2e;
   display: none; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #shop-by {
+      height: 95px;
+      justify-content: space-between;
+      padding: 15px 10%; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     #shop-by {
+      height: 70px;
       width: 768px;
       padding: 10px 80px; } }
   @media only screen and (min-width: 960px) {
     #shop-by {
+      height: 70px;
       width: 960px;
       padding: 10px 100px; } }
 
@@ -156,6 +179,9 @@
   background-color: #ebe7df;
   display: flex;
   border-top: 1px solid #bcb5a7; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .info-content {
+      display: none; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     .info-content {
       width: 768px;
@@ -345,6 +371,9 @@
 
 #home-products {
   background-color: #ebe7df; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #home-products {
+      display: none; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     #home-products {
       padding: 25px 80px 25px 80px;
@@ -357,27 +386,42 @@
 .special-offers-item-badge {
   font-family: Aller_Lt;
   color: white;
-  display: inline-block; }
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
-    .special-offers-item-badge {
-      font-size: 19px;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 14px 16px 8px 16px;
-      line-height: 19px;
-      margin-top: 50px;
-      height: 45px; } }
-  @media only screen and (min-width: 960px) {
+  background-color: rgba(0, 0, 0, 0.8); }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
     .special-offers-item-badge {
       font-size: 24px;
-      background-color: rgba(0, 0, 0, 0.8);
       padding: 10px 20px 10px 20px;
       line-height: 24px;
       margin-top: 50px;
-      height: 45px; } }
+      height: 45px;
+      display: inline-block; } }
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    .special-offers-item-badge {
+      font-size: 19px;
+      padding: 14px 16px 8px 16px;
+      line-height: 19px;
+      margin-top: 50px;
+      height: 45px;
+      display: inline-block; } }
+  @media only screen and (min-width: 960px) {
+    .special-offers-item-badge {
+      font-size: 24px;
+      padding: 10px 20px 10px 20px;
+      line-height: 24px;
+      margin-top: 50px;
+      height: 45px;
+      display: inline-block; } }
 
 .special-offers-item {
   display: flex;
   justify-content: center; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .special-offers-item {
+      width: 243px;
+      height: 145px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     .special-offers-item {
       width: 194px;
@@ -390,24 +434,31 @@
       margin: 10px 4px; } }
 
 #on-sale {
-  background-image: url("../images/on_sale.jpg"); }
+  background: url("../images/on_sale.jpg") no-repeat; }
 
 #must-have {
-  background-image: url("../images/must_have.jpg"); }
+  background: url("../images/must_have.jpg") no-repeat; }
 
 #special-offers {
-  background-image: url("../images/special_offers.jpg"); }
+  background: url("../images/special_offers.jpg") no-repeat; }
 
 #special-offers-bar {
-  background-color: #242424;
-  display: flex; }
+  background-color: #242424; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    #special-offers-bar {
+      height: 533px;
+      background-size: contain;
+      justify-content: center;
+      padding-top: 20px; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     #special-offers-bar {
       width: 768px;
       padding: 0px 80px 0px 80px;
-      height: 165px; } }
+      height: 165px;
+      display: flex; } }
   @media only screen and (min-width: 960px) {
     #special-offers-bar {
       width: 960px;
       padding: 0px 100px 0px 100px;
-      height: 165px; } }
+      height: 165px;
+      display: flex; } }

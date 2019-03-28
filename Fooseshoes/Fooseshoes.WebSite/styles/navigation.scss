@@ -1,11 +1,15 @@
 ﻿@media only screen and (min-width: 320px) and (max-width: 768px) {
+#nav-dropdowns{
+    display:flex;
+}
+
 .nav-dropbtn {
     border-color: #eeeeee;
     border-style: solid;
     border-width: 1px;
     border-top: none;
     border-bottom: none;
-    padding: 14px 16px 14px 16px;
+    padding: 14px 14px 14px 16px;
     padding-left: 10px;
     padding-right: 10px;
     height: 45px;
@@ -30,6 +34,7 @@ border-color: #eeeeee;
 }
 
 .material-icons{
+    padding-bottom:20px !important;
     color: #c7c7c7;
 }
 
@@ -48,7 +53,7 @@ border-color: #eeeeee;
 }
     }
 
-#nav-dropdown-el{
+.nav-dropdowns{
     @media only screen and (min-width: 768px) and (max-width: 960px) {
         display: none;
     }
@@ -58,6 +63,25 @@ border-color: #eeeeee;
     }
 }
 
+.nav-dropdown a{
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 960px) {
+        display: none;
+    }
+}
+
+.nav-dropbtn {
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 960px) {
+        display: none;
+    }
+}
 
 #nav-bar-btns{
     @media only screen and (min-width: 320px) and (max-width: 768px) {

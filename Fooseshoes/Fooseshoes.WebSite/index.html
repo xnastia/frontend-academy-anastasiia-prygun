@@ -65,15 +65,22 @@
                 <a class="nav-bar-btn" id="blog" onclick="onNavBarBtnClick(this.id)">Blog</a>
                 <a class="nav-bar-btn" id="contact" onclick="onNavBarBtnClick(this.id)">Contact</a>
             </div>
-            <div class="nav-dropdown" id="nav-dropdown-el">
-                <button class="nav-dropbtn dropdown-btn" onclick="showNavDropdown()"><i class="material-icons">menu</i></button>
-                <div class="nav-dropdown-content dropdown-content" id="nav-dropdown">
-                    <a id="home" onclick="onHomeBtnClick()">Home</a>
-                    <a class="dropdown-nav-bar-btn" id="products" onclick="onProductsBtnClick()">Products</a>
-                    <a class="dropdown-nav-bar-btn" id="about" onclick="onNavBarBtnClick(this.id)">About</a>
-                    <a class="dropdown-nav-bar-btn" id="pages" onclick="onNavBarBtnClick(this.id)">Pages</a>
-                    <a class="dropdown-nav-bar-btn" id="blog" onclick="onNavBarBtnClick(this.id)">Blog</a>
-                    <a class="dropdown-nav-bar-btn" id="contact" onclick="onNavBarBtnClick(this.id)">Contact</a>
+            <div id="nav-dropdowns">
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn dropdown-btn" onclick="showNavDropdown()"><i class="material-icons">menu</i></button>
+                    <div class="nav-dropdown-content dropdown-content" id="nav-dropdown">
+                        <a id="home" onclick="onHomeBtnClick()">Home</a>
+                        <a id="products" onclick="onProductsBtnClick()">Products</a>
+                        <a id="about" onclick="onNavBarBtnClick(this.id)">About</a>
+                        <a id="pages" onclick="onNavBarBtnClick(this.id)">Pages</a>
+                        <a id="blog" onclick="onNavBarBtnClick(this.id)">Blog</a>
+                        <a id="contact" onclick="onNavBarBtnClick(this.id)">Contact</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown nav-dropdown-el">
+                    <button class="nav-dropbtn dropdown-btn" onclick="showDropdown('nav-search-dropdown')"><i class="material-icons expand-icon">search</i></button>
+                    <div class="nav-dropdown-content dropdown-content" id="nav-search-dropdown">
+                    </div>
                 </div>
             </div>
             <div class="nav-bar-btns">
@@ -90,12 +97,16 @@
         <div id="slide">
             <div class="slides-active">
                 <div class="slider-text">
-                    <div class="price">$145,99</div>
-                    <p class="slider-text-header">Pink Shoes</p>
-                    <p class="slider-text-header">2013 Collection</p>
+                    <div id="wrapper">
+                        <div class="price" id="price">$145,99</div>
+                        <div id="text-wrapper">
+                            <p class="slider-text-header">Pink Shoes</p>
+                            <p class="slider-text-header">2013 Collection</p>
+                        </div>
+                    </div>
                     <p class="slider-ordinar-text">Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit
                         amet eu orci. Donec cignissim dolor eget...</p>
-                    <div class="icon-bar"><a class="slider-image-icon"><i class="fa fa-eye slider-icon"></i></a>
+                    <div class="icon-bar" id="icon-bar"><a class="slider-image-icon"><i class="fa fa-eye slider-icon"></i></a>
                         <a class="slider-image-icon"><i class="far fa-star slider-icon"></i></a>
                         <a class="slider-image-icon"><i class="glyphicon glyphicon-log-out slider-icon"></i></a>
                         <a class="slider-image-icon"><i class="fa fa-cart-arrow-down slider-icon"></i></a></div>
@@ -162,81 +173,91 @@
             <div id="special-offers" class="special-offers-item">
                 <div class="special-offers-item-badge">MUST HAVE</div>
             </div>
-            <div id="must-have"></div>
         </div>
         <div id="shop-by">
             <div class="shop-by-text">Shop by</div>
-            <div class="shop-by-btn">Brands<div class="down-icon"><i class="material-icons expand-icon">expand_more</i>
+            <div class="shop-by-btn">
+                Brands<div class="down-icon">
+                    <i class="material-icons expand-icon">expand_more</i>
                 </div>
             </div>
-            <div class="shop-by-btn">Categories<div class="down-icon"><i class="material-icons expand-icon">expand_more</i></div>
+            <div class="shop-by-btn">
+                Categories<div class="down-icon"><i class="material-icons expand-icon">expand_more</i></div>
             </div>
-            <div class="shop-by-btn">Price <div class="down-icon"><i class="material-icons expand-icon">expand_more</i>
+            <div class="shop-by-btn">
+                Price <div class="down-icon">
+                    <i class="material-icons expand-icon">expand_more</i>
                 </div>
             </div>
         </div>
         <div id="home-products">
-            <div class="home-products-legend">
-                <div>New arrivals on FooseShoes</div><a class="show-all-btn">Show All</a>
+                <div class="home-products-legend">
+                    <div>New arrivals on FooseShoes</div><a class="show-all-btn">Show All</a>
+                </div>
+                <div class="items" id="new-arrivals-items">
+                    <script>buildItemsList("new-arrivals-items", "jsons/newArrivals.json", 3)</script>
+                </div>
+                <div class="home-products-legend">
+                    <div>Best sellers of the month</div><a class="show-all-btn">Show All</a>
+                </div>
+                <div class="items" id="best-sellers">
+                    <script>buildItemsList("best-sellers", "jsons/bestSellers.json", 3)</script>
+                </div>
             </div>
-            <div class="items" id="new-arrivals-items">
-                <script>buildItemsList("new-arrivals-items", "jsons/newArrivals.json", 3)</script>
-            </div>
-            <div class="home-products-legend">
-                <div>Best sellers of the month</div><a class="show-all-btn">Show All</a>
-            </div>
-            <div class="items" id="best-sellers">
-                <script>buildItemsList("best-sellers", "jsons/bestSellers.json", 3)</script>
-            </div>
-        </div>
         <div id="products-page">
-            <div class="home-products-legend">
-                <div class="legend-group">
-                    <div>All Products</div>
-                    <div class="products-text"><span onclick="onHomeBtnClick()">Home</span> > All products</div>
+                <div class="home-products-legend">
+                    <div class="legend-group">
+                        <div>All Products</div>
+                        <div class="products-text"><span onclick="onHomeBtnClick()">Home</span> > All products</div>
+                    </div>
+                    <div class="legend-group">
+                        <div class="products-text">View as</div>
+                        <div class="grid-btn" onclick="blockView()"><span class="fa fa-th-large"></span></div>
+                        <div class="grid-btn" onclick="inlineView()"><span class="fa fa-list"></span></div>
+                        <a class="show-all-btn">Sort alphabetically <div id="sort-down-icon"><i class="material-icons expand-icon">expand_more</i></div></a>
+                    </div>
                 </div>
-                <div class="legend-group">
-                    <div class="products-text">View as</div>
-                    <div class="grid-btn" onclick="blockView()"><span class="fa fa-th-large"></span></div>
-                    <div class="grid-btn" onclick="inlineView()"><span class="fa fa-list"></span></div>
-                    <a class="show-all-btn">Sort alphabetically <div id="sort-down-icon"><i class="material-icons expand-icon">expand_more</i></div></a>
+                <div class="items" id="products-items">
+                    <script>buildItemsList("products-items", "jsons/products.json")</script>
                 </div>
             </div>
-            <div class="items" id="products-items">
-                <script>buildItemsList("products-items", "jsons/products.json")</script>
-            </div>
-        </div>
         <div class="info-content">
-            <div class="free-shipping">
-                <header><b>FREE SHIPPING</b></header>
-                <br />Vivamus metus turpis bibendum,
-                vitae euismod vel, vulputate vel nibh. Class abtent taciti sociosqu ad litora
-                torquent per conubia nistra, per inceptos himenaeos.
-                Donec erat sam,
-            </div>
-            <div class="free-shipping" id="testimonials">
-                <header><b>TESTIMONIALS</b></header>
-                <br />vel, vulputate vel nibh. Class abtent taciti sociosqu ad litora
-                torquent per conubia nistra, per inceptos himenaeos.
-                Donec erat sam, vehicula id dictum sit [...]
-                <br /><i>-John Doe-</i>
-            </div>
-            <div id="blog-news">
-                <header><b>BLOG NEWS</b></header>
-                <script>refreshBlogNews()</script>
-                <div class="enterance" id="first-enterance"><br />
-                    <div class="date">APR 01</div>
-                    <div class="blog-text"><b>Nice&clean. The best for your blog.</b> <br /> Vivamus metus turpis,
-                        bibendum vitae euismod vel, vulputate vel</div>
+                <div class="free-shipping">
+                    <header><b>FREE SHIPPING</b></header>
+                    <br />Vivamus metus turpis bibendum,
+                    vitae euismod vel, vulputate vel nibh. Class abtent taciti sociosqu ad litora
+                    torquent per conubia nistra, per inceptos himenaeos.
+                    Donec erat sam,
                 </div>
-                <div class="enterance" id="second-enterance"><br />
-                    <div class="date">APR 01</div>
-                    <div class="blog-text"><b>What an ecommerce theme!</b> <br />Vulputate vel nibh. Class aptent taciti
-                        sociosqu ad litora</div>
+                <div class="free-shipping" id="testimonials">
+                    <header><b>TESTIMONIALS</b></header>
+                    <br />vel, vulputate vel nibh. Class abtent taciti sociosqu ad litora
+                    torquent per conubia nistra, per inceptos himenaeos.
+                    Donec erat sam, vehicula id dictum sit [...]
+                    <br /><i>-John Doe-</i>
+                </div>
+                <div id="blog-news">
+                    <header><b>BLOG NEWS</b></header>
+                    <script>refreshBlogNews()</script>
+                    <div class="enterance" id="first-enterance">
+                        <br />
+                        <div class="date">APR 01</div>
+                        <div class="blog-text">
+                            <b>Nice&clean. The best for your blog.</b> <br /> Vivamus metus turpis,
+                            bibendum vitae euismod vel, vulputate vel
+                        </div>
+                    </div>
+                    <div class="enterance" id="second-enterance">
+                        <br />
+                        <div class="date">APR 01</div>
+                        <div class="blog-text">
+                            <b>What an ecommerce theme!</b> <br />Vulputate vel nibh. Class aptent taciti
+                            sociosqu ad litora
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+</main>
     <footer>
         <div id="widgets">
             <div class="static-text">
@@ -292,164 +313,166 @@
             <div id="copyright">Copyright &copy; Fooseshoes 2013. Designed by EnzoliVolti</div>
             <div id="botom-bar-nav"><a>Home</a>/<a>Support</a>/<a>Terms&Conditions</a>/<a>Faqs</a>/<a>Contact us</a></div>
         </div>
-    </footer>
-    <div class="container pb-modalreglog-container">
-        <div class="row">
-            <div class="col-xs-12 col-md-4 col-md-offset-4">
-                <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="input-group pb-modalreglog-input-group" id="modal-header">
-                                    <button class="modal-nav-btn-active" id="login-btn"
-                                        onclick="switchLoginRegister(this)">Login</button>
-                                    <button class="modal-nav-btn" id="register-btn" onclick="switchLoginRegister(this)">
-                                        Register
+        <div class="container pb-modalreglog-container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-md-offset-4">
+                    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="input-group pb-modalreglog-input-group" id="modal-header">
+                                        <button class="modal-nav-btn-active" id="login-btn"
+                                                onclick="switchLoginRegister(this)">
+                                            Login
+                                        </button>
+                                        <button class="modal-nav-btn" id="register-btn" onclick="switchLoginRegister(this)">
+                                            Register
+                                        </button>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
 
-                            <div class="modal-body">
-                                <form id="login-form">
-                                    <div class="form-group">
-                                        <label for="email">
-                                            Email
-                                            address
-                                        </label>
-                                        <div class="input-group pb-modalreglog-input-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
+                                <div class="modal-body">
+                                    <form id="login-form">
+                                        <div class="form-group">
+                                            <label for="email">
+                                                Email
+                                                address
+                                            </label>
+                                            <div class="input-group pb-modalreglog-input-group">
+                                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-user"></span>
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <div class="input-group pb-modalreglog-input-group">
-                                            <input type="password" class="form-control" id="pws" placeholder="Password">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-lock"></span>
-                                            </span>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <div class="input-group pb-modalreglog-input-group">
+                                                <input type="password" class="form-control" id="pws" placeholder="Password">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-lock"></span>
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
-                                <form id="register-form">
-                                    <div class="form-group">
-                                        <div id="pb-modalreglog-progressbar">
+                                    </form>
+                                    <form id="register-form">
+                                        <div class="form-group">
+                                            <div id="pb-modalreglog-progressbar">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">
-                                            Email
-                                            address
-                                        </label>
-                                        <div class="input-group pb-modalreglog-input-group">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <input type="email" class="form-control" id="inputEmail"
-                                                placeholder="Email">
+                                        <div class="form-group">
+                                            <label for="email">
+                                                Email
+                                                address
+                                            </label>
+                                            <div class="input-group pb-modalreglog-input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-user"></span>
+                                                </span>
+                                                <input type="email" class="form-control" id="inputEmail"
+                                                       placeholder="Email">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <div class="input-group pb-modalreglog-input-group">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-lock"></span>
-                                            </span>
-                                            <input type="password" class="form-control" id="inputPws"
-                                                placeholder="Password">
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <div class="input-group pb-modalreglog-input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-lock"></span>
+                                                </span>
+                                                <input type="password" class="form-control" id="inputPws"
+                                                       placeholder="Password">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="confirmpassword">
-                                            Confirm
-                                            password
-                                        </label>
-                                        <div class="input-group pb-modalreglog-input-group">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-lock"></span>
-                                            </span>
-                                            <input type="password" class="form-control" id="inputConfirmPws"
-                                                placeholder="Confirm Password">
-                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirmpassword">
+                                                Confirm
+                                                password
+                                            </label>
+                                            <div class="input-group pb-modalreglog-input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-lock"></span>
+                                                </span>
+                                                <input type="password" class="form-control" id="inputConfirmPws"
+                                                       placeholder="Confirm Password">
+                                            </div>
 
-                                    </div>
-                                </form>
-                                <form class="pb-modalreglog-form-reg" id="terms-form">
-                                    <div class="form-group">
-                                        <input type="checkbox" id="ch" name="chs">
-                                        I agree with <a href="#">
-                                            terms
-                                            and conditions.
-                                        </a>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer" id="login-footer">
-                                <button type="button" class="modal-close-btn" data-dismiss="modal">
-                                    Close
-                                </button>
-                                <button type="button" class="modal-login-btn">
-                                    Log in
-                                </button>
-                            </div>
-                            <div class="modal-footer" id="register-footer">
-                                <button type="button" class="modal-close-btn" data-dismiss="modal">
-                                    Close
-                                </button>
-                                <button type="button" class="modal-signup-btn">
-                                    Sign up
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container pb-modalreglog-container">
-        <div class="row">
-            <div class="col-xs-12 col-md-4 col-md-offset-4">
-                <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="input-group pb-modalreglog-input-group" id="modal-header">                                    
+                                        </div>
+                                    </form>
+                                    <form class="pb-modalreglog-form-reg" id="terms-form">
+                                        <div class="form-group">
+                                            <input type="checkbox" id="ch" name="chs">
+                                            I agree with <a href="#">
+                                                terms
+                                                and conditions.
+                                            </a>
+                                        </div>
+                                    </form>
                                 </div>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                            <div class="modal-body" id="subscribe-modal-body">
-                                <div id="incorrect-email">Incorrect email. Please try again.</div>
-                                <div id="correct-email">Thank you for subscription.</div>
-                            </div>
-                            <div class="modal-footer" id="login-footer">
-                                <button type="button" class="modal-close-btn" data-dismiss="modal">
-                                    Close
-                                </button>                                
-                            </div>
-                            <div class="modal-footer" id="register-footer">
-                                <button type="button" class="modal-close-btn" data-dismiss="modal">
-                                    Close
-                                </button>
-                                <button type="button" class="modal-signup-btn">
-                                    Sign up
-                                </button>
+                                <div class="modal-footer" id="login-footer">
+                                    <button type="button" class="modal-close-btn" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="modal-login-btn">
+                                        Log in
+                                    </button>
+                                </div>
+                                <div class="modal-footer" id="register-footer">
+                                    <button type="button" class="modal-close-btn" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="modal-signup-btn">
+                                        Sign up
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+        <div class="container pb-modalreglog-container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-md-offset-4">
+                    <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="input-group pb-modalreglog-input-group" id="modal-header">
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
 
+                                <div class="modal-body" id="subscribe-modal-body">
+                                    <div id="incorrect-email">Incorrect email. Please try again.</div>
+                                    <div id="correct-email">Thank you for subscription.</div>
+                                </div>
+                                <div class="modal-footer" id="login-footer">
+                                    <button type="button" class="modal-close-btn" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                </div>
+                                <div class="modal-footer" id="register-footer">
+                                    <button type="button" class="modal-close-btn" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="modal-signup-btn">
+                                        Sign up
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+</body>
 </html>
