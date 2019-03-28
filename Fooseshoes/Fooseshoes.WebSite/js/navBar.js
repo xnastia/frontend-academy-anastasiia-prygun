@@ -13,7 +13,7 @@ function onProductsBtnClick() {
     document.getElementById("special-offers-bar").style.display = "none";
     document.getElementById("home-products").style.display = "none";
     document.getElementById("shop-by").style.display = "flex";
-    if (document.getElementById("products-page").offsetWidth > 768) {
+    if (window.innerWidth > 767) {
         document.getElementById("products-page").style.display = "block";
     }    
     document.getElementById("wrapper").classList.add("wrapper");
